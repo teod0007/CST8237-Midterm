@@ -5,6 +5,7 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <InputManager.h>
+#include <time.h> 
 
 #define PIXELS_PER_METRE 8.0f
 
@@ -49,6 +50,12 @@ void Game::InitializeImpl()
   _firstBox.GetTransform().position = { windowSize.x / 2, windowSize.y / 2, 0 };
   _secondBox.GetTransform().position = { windowSize.x / 3, windowSize.y / 1, 0 };
   _thirdBox.GetTransform().position = { windowSize.x / 1, windowSize.y / 3, 0 };
+  srand(time(NULL));
+  _firstBox.SetRotationSpeed(30);
+  _secondBox.SetRotationSpeed(130);
+  _thirdBox.SetRotationSpeed(230);
+  
+  
 }
 
 void Game::UpdateImpl(float dt)

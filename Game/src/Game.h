@@ -6,6 +6,7 @@
 
 union SDL_Event;
 struct SDL_Texture;
+class TestBox;
 
 class Game: public GameEngine
 {

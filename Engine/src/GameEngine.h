@@ -34,9 +34,9 @@ public:
   void Draw();
 
   ~GameEngine();
-
-protected:
   GameEngine();
+protected:
+  
 
   virtual void InitializeImpl() = 0;
   virtual void UpdateImpl(float dt) = 0;

@@ -2,7 +2,7 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
-float _rotationSpeed = 1.0f;
+
 
 TestBox::~TestBox()
 {
@@ -32,6 +32,8 @@ void TestBox::Initialize(SDL_Renderer *renderer)
   _transform.scale.x = 1.0f;
   _transform.scale.y = 1.0f;
   _transform.scale.z = 1.0f;
+
+  _rotationSpeed = 0;
 }
 
 void TestBox::Update(float dt)

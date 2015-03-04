@@ -51,9 +51,9 @@ void Game::InitializeImpl()
   _secondBox.GetTransform().position = { windowSize.x / 3, windowSize.y / 1, 0 };
   _thirdBox.GetTransform().position = { windowSize.x / 1, windowSize.y / 3, 0 };
   srand(time(NULL));
-  _firstBox.SetRotationSpeed(30);
-  _secondBox.SetRotationSpeed(130);
-  _thirdBox.SetRotationSpeed(230);
+  _firstBox.SetRotationSpeed(rand() % 400 + 50);
+  _secondBox.SetRotationSpeed(rand() % 400 + 50);
+  _thirdBox.SetRotationSpeed(rand() % 400 + 50);
   
   
 }
